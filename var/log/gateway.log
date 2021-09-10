@@ -1,0 +1,584 @@
+[2021-05-02 22:04:33,233] DEBUG in root: Upstream URL: http://localhost:5300/messages/583e7875-11fc-453a-aff4-41b7654cb265/replies/
+[2021-05-02 22:30:52,403] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-02 22:31:12,791] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-02 22:32:50,265] DEBUG in root: Upstream URL: http://localhost:5202/posts/Michael/
+[2021-05-02 22:54:35,114] DEBUG in root: Upstream URL: http://localhost:5200/posts/Michael/
+[2021-05-02 22:55:04,069] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-02 22:59:26,318] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-02 23:03:31,804] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 02:32:49,625] DEBUG in root: Upstream URL: http://localhost:5200/posts/Michael/
+[2021-05-03 02:33:33,682] DEBUG in root: Upstream URL: http://localhost:5201/posts/Michael/
+[2021-05-03 02:34:29,072] DEBUG in root: Upstream URL: http://localhost:5202/posts/Michael/
+[2021-05-03 02:34:45,042] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 02:35:58,528] DEBUG in root: Upstream URL: http://localhost:5400/index/
+[2021-05-03 02:35:58,640] ERROR in root: HTTPConnectionPool(host='localhost', port=5400): Max retries exceeded with url: /index/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f9de3b00fa0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 665, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 387, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.8/http/client.py", line 1255, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1301, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1250, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1010, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 950, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f9de3b00fa0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 719, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=5400): Max retries exceeded with url: /index/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f9de3b00fa0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./gateway.py", line 151, in gateway
+    upstream_response = requests.request(
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=5400): Max retries exceeded with url: /index/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f9de3b00fa0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2021-05-03 02:37:40,182] DEBUG in root: Upstream URL: http://localhost:5200/posts/Michael/
+[2021-05-03 02:37:54,118] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 02:39:20,909] DEBUG in root: Upstream URL: http://localhost:5400/index/
+[2021-05-03 02:39:43,612] DEBUG in root: Upstream URL: http://localhost:5202/posts/Michael/
+[2021-05-03 14:06:29,955] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 14:10:48,046] DEBUG in root: Upstream URL: http://localhost:5201/posts/Michael/
+[2021-05-03 14:11:16,085] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 14:11:32,127] DEBUG in root: Upstream URL: http://localhost:5400/index/
+[2021-05-03 14:11:32,827] ERROR in root: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 665, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 421, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 416, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1347, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 268, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 719, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 400, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/lib/python3/dist-packages/six.py", line 702, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 665, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 421, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 416, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1347, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 268, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./gateway.py", line 151, in gateway
+    upstream_response = requests.request(
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[2021-05-03 14:17:13,776] DEBUG in root: Upstream URL: http://localhost:5200/posts/Michael/
+[2021-05-03 14:17:33,755] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 14:21:42,314] DEBUG in root: Upstream URL: http://localhost:5400/index/
+[2021-05-03 14:21:42,552] ERROR in root: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 665, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 421, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 416, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1347, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 268, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 719, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 400, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/lib/python3/dist-packages/six.py", line 702, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 665, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 421, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 416, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1347, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 268, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./gateway.py", line 151, in gateway
+    upstream_response = requests.request(
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[2021-05-03 14:27:30,129] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 14:27:37,031] DEBUG in root: Upstream URL: http://localhost:5201/posts/Michael/
+[2021-05-03 15:01:58,676] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 15:02:17,007] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 15:03:00,685] DEBUG in root: Upstream URL: http://localhost:5400/index/
+[2021-05-03 15:03:01,262] ERROR in root: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 665, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 421, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 416, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1347, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 268, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 719, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 400, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/lib/python3/dist-packages/six.py", line 702, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 665, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 421, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 416, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1347, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 268, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./gateway.py", line 151, in gateway
+    upstream_response = requests.request(
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[2021-05-03 15:03:28,066] DEBUG in root: Upstream URL: http://localhost:5200/posts/Michael/
+[2021-05-03 15:51:03,076] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 15:51:44,927] DEBUG in root: Upstream URL: http://localhost:5202/posts/Michael/
+[2021-05-03 15:51:56,225] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 15:52:09,222] DEBUG in root: Upstream URL: http://localhost:5202/posts/Michael/
+[2021-05-03 15:52:26,893] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 17:50:49,425] DEBUG in root: Upstream URL: http://localhost:5200/posts/Michael/
+[2021-05-03 17:51:08,951] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 18:12:03,976] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 18:14:48,103] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 18:15:41,449] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 18:20:24,617] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 18:21:59,619] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 18:28:12,294] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 18:33:32,905] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 18:45:49,038] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 18:53:17,426] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 19:02:20,464] DEBUG in root: Upstream URL: http://localhost:5201/posts/Michael/
+[2021-05-03 20:24:49,678] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 20:24:49,755] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 20:24:49,888] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 20:24:50,035] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 20:24:50,200] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 20:24:50,341] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 20:24:50,494] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 20:24:50,624] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 20:24:50,795] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 20:24:50,934] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 20:24:51,117] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 20:24:51,288] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 20:24:51,423] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 20:24:51,588] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 20:24:51,709] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 20:24:51,864] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 20:24:52,011] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 20:24:52,113] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 20:24:52,253] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 20:24:52,364] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 20:24:52,522] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 20:24:52,656] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 20:24:52,825] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 20:24:52,963] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 20:24:53,121] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 20:24:53,299] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 20:24:53,499] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 20:24:53,644] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 20:24:53,783] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 20:24:53,931] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 20:24:54,084] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 20:27:44,993] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 20:27:45,068] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 20:27:45,195] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 20:27:45,319] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 20:27:45,450] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 20:27:45,563] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 20:27:45,695] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 20:27:45,881] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 20:27:46,038] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 20:27:46,167] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 20:27:46,304] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 20:27:46,448] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 20:27:46,579] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 20:27:46,760] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 20:27:46,927] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 20:27:47,086] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 20:27:47,171] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 20:27:47,317] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 20:27:47,446] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 20:27:47,572] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 20:27:47,706] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 20:27:47,896] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 20:27:48,027] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 20:27:48,173] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 20:27:48,337] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 20:27:48,468] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 20:27:48,620] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 20:27:48,787] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 20:27:48,958] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 20:27:49,104] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 20:27:49,234] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 22:34:41,579] DEBUG in root: Upstream URL: http://localhost:5400/index/search
+[2021-05-03 22:59:29,595] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keyword=Why
+[2021-05-03 23:01:48,559] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keyword=Why
+[2021-05-03 23:02:03,778] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keyword=Why
+[2021-05-03 23:03:08,233] DEBUG in root: Upstream URL: http://localhost:5100/users/Michael?password=SqwkBoi
+[2021-05-03 23:07:34,417] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keyword=Why
+[2021-05-03 23:09:41,967] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keyword=Why
+[2021-05-03 23:10:20,951] DEBUG in root: Upstream URL: http://localhost:5400/index/search?key=Why
+[2021-05-03 23:11:20,767] DEBUG in root: Upstream URL: http://localhost:5400/index/search?key=Why
+[2021-05-03 23:11:26,510] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keyword=Why
+[2021-05-03 23:12:02,748] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keyword=Why
+[2021-05-03 23:13:47,507] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keyword=Why
+[2021-05-03 23:13:47,512] ERROR in root: HTTPConnectionPool(host='localhost', port=5400): Max retries exceeded with url: /index/search?keyword=Why (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f978d3d28e0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 665, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 387, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.8/http/client.py", line 1255, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1301, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1250, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1010, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 950, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f978d3d28e0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 719, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=5400): Max retries exceeded with url: /index/search?keyword=Why (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f978d3d28e0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./gateway.py", line 151, in gateway
+    upstream_response = requests.request(
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=5400): Max retries exceeded with url: /index/search?keyword=Why (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f978d3d28e0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2021-05-03 23:14:11,564] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keyword=Why
+[2021-05-03 23:15:26,882] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keyword=Why
+[2021-05-03 23:17:42,072] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keyword=Why
+[2021-05-03 23:19:22,162] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keyword=Why
+[2021-05-03 23:21:40,944] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keyword=Why
+[2021-05-03 23:21:50,310] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keyword=Why'this
+[2021-05-03 23:22:16,995] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keyword=Why'this
+[2021-05-03 23:23:13,352] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keyword=Why'this
+[2021-05-03 23:24:06,693] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keyword=Why'this
+[2021-05-03 23:25:48,168] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keyword=Why'this
+[2021-05-03 23:29:32,082] DEBUG in root: Upstream URL: http://localhost:5400/index/search-all?keywordList=Why,this
+[2021-05-03 23:30:39,623] DEBUG in root: Upstream URL: http://localhost:5400/index/search-any?keywordList=Why,this
+[2021-05-03 23:31:19,121] DEBUG in root: Upstream URL: http://localhost:5400/index/search-any?keywordList=Why,this
+[2021-05-03 23:31:56,063] DEBUG in root: Upstream URL: http://localhost:5400/index/search-any?keywordList=Why,bank
+[2021-05-03 23:32:21,989] DEBUG in root: Upstream URL: http://localhost:5400/index/search-any?keywordList=Why,bank
+[2021-05-03 23:32:45,426] DEBUG in root: Upstream URL: http://localhost:5400/index/search-any?keywordList=Why,bank
+[2021-05-03 23:39:01,731] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 23:39:01,785] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 23:39:01,847] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 23:43:07,453] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 23:43:07,527] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 23:43:07,677] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 23:43:07,807] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 23:43:07,946] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 23:43:08,063] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 23:43:08,222] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 23:43:08,388] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 23:43:08,515] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 23:43:08,661] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 23:43:08,799] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 23:43:08,935] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 23:43:09,064] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 23:43:09,214] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 23:43:09,347] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 23:43:09,472] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 23:43:09,600] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 23:43:09,721] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 23:43:09,904] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 23:43:10,024] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 23:43:10,165] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 23:43:10,300] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 23:43:10,416] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 23:43:10,553] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 23:43:10,682] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 23:43:10,808] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 23:43:10,971] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 23:43:11,097] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 23:43:11,239] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-03 23:43:11,360] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-03 23:43:11,491] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-03 23:44:33,935] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keyword=Why
+[2021-05-03 23:44:43,517] DEBUG in root: Upstream URL: http://localhost:5400/index/search-any?keywordList=Why,bank
+[2021-05-03 23:45:28,242] DEBUG in root: Upstream URL: http://localhost:5400/index/search-any?keywordList=Why,bank
+[2021-05-03 23:49:37,232] DEBUG in root: Upstream URL: http://localhost:5400/index/search-any?keywordList=Why,bank
+[2021-05-03 23:50:37,512] DEBUG in root: Upstream URL: http://localhost:5400/index/search-any?keywordList=Why:bank
+[2021-05-03 23:50:45,182] DEBUG in root: Upstream URL: http://localhost:5400/index/search-any?keywordList=Why'bank
+[2021-05-03 23:51:32,765] DEBUG in root: Upstream URL: http://localhost:5400/index/search-any?keywordList=Why,bank
+[2021-05-03 23:53:48,961] DEBUG in root: Upstream URL: http://localhost:5400/index/search-any?keywordList=Why,bank
+[2021-05-03 23:55:01,728] DEBUG in root: Upstream URL: http://localhost:5400/index/search-any?keywordList=Why,bank
+[2021-05-03 23:56:53,718] DEBUG in root: Upstream URL: http://localhost:5400/index/search-any?keywordList=Why,bank
+[2021-05-03 23:57:47,720] DEBUG in root: Upstream URL: http://localhost:5400/index/search-any?keywordList=Why,bank
+[2021-05-03 23:59:11,952] DEBUG in root: Upstream URL: http://localhost:5400/index/search-any?keywordList=Why,bank
+[2021-05-04 00:00:01,027] DEBUG in root: Upstream URL: http://localhost:5400/index/search-any?keywordList=Why,bank
+[2021-05-04 00:00:21,545] DEBUG in root: Upstream URL: http://localhost:5400/index/search-any?keywordList=Why,bank
+[2021-05-04 00:02:15,856] DEBUG in root: Upstream URL: http://localhost:5400/index/search-any?keywordList=Why,bank
+[2021-05-04 00:03:30,023] DEBUG in root: Upstream URL: http://localhost:5400/index/search-any?keywordList=Why,bank
+[2021-05-04 00:05:00,707] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keywordList=bank
+[2021-05-04 00:05:12,696] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keyword=bank
+[2021-05-04 00:05:58,359] DEBUG in root: Upstream URL: http://localhost:5400/index/search-all?keywordList=bank,free
+[2021-05-04 00:06:18,027] DEBUG in root: Upstream URL: http://localhost:5400/index/search-any?keywordList=bank,free
+[2021-05-04 00:25:49,803] DEBUG in root: Upstream URL: http://localhost:5400/index/search-exclude?includeList=bank
+[2021-05-04 00:27:42,479] DEBUG in root: Upstream URL: http://localhost:5400/index/search-exclude?includeList=bank
+[2021-05-04 00:30:09,329] DEBUG in root: Upstream URL: http://localhost:5400/index/search-exclude?includeList=bank
+[2021-05-04 00:33:08,954] DEBUG in root: Upstream URL: http://localhost:5400/index/search-exclude?includeList=bank,risk
+[2021-05-04 00:38:32,767] DEBUG in root: Upstream URL: http://localhost:5400/index/search-exclude?includeList=bank,risk
+[2021-05-04 00:43:47,848] DEBUG in root: Upstream URL: http://localhost:5400/index/search-exclude?includeList=bank,risk
+[2021-05-04 00:44:02,410] DEBUG in root: Upstream URL: http://localhost:5400/index/search-exclude?includeList=bank,risk
+[2021-05-04 00:46:30,237] DEBUG in root: Upstream URL: http://localhost:5400/index/search-exclude?includeList=bank,risk
+[2021-05-04 00:47:08,848] DEBUG in root: Upstream URL: http://localhost:5400/index/search-exclude?includeList=bank,risk
+[2021-05-04 00:48:22,015] DEBUG in root: Upstream URL: http://localhost:5400/index/search-exclude?includeList=bank,risk
+[2021-05-04 00:48:53,896] DEBUG in root: Upstream URL: http://localhost:5400/index/search-exclude?includeList=bank,risk?excludeList=eaten,fall
+[2021-05-04 00:51:22,351] DEBUG in root: Upstream URL: http://localhost:5400/index/search-exclude?includeList=bank+risk
+[2021-05-04 00:51:46,421] DEBUG in root: Upstream URL: http://localhost:5400/index/search-exclude?includeList=bank+risk
+[2021-05-04 00:52:32,756] DEBUG in root: Upstream URL: http://localhost:5400/index/search-exclude?includeList=bank+risk
+[2021-05-04 00:54:13,375] DEBUG in root: Upstream URL: http://localhost:5400/index/search-exclude?includeList=bank%20risk
+[2021-05-04 00:55:38,822] DEBUG in root: Upstream URL: http://localhost:5400/index/search-exclude?includeList=bank%20risk
+[2021-05-04 01:01:28,794] DEBUG in root: Upstream URL: http://localhost:5400/index/search-exclude?includeList=bank%20risk
+[2021-05-04 01:05:52,200] DEBUG in root: Upstream URL: http://localhost:5400/index/search-exclude?includeList=bank&excludeList=eaten
+[2021-05-04 01:06:24,373] DEBUG in root: Upstream URL: http://localhost:5400/index/search?includeList=bank
+[2021-05-04 01:06:43,389] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keyword=bank
+[2021-05-04 01:06:50,196] DEBUG in root: Upstream URL: http://localhost:5400/index/search-exclude?includeList=bank&excludeList=eaten
+[2021-05-04 01:07:59,130] DEBUG in root: Upstream URL: http://localhost:5400/index/search-exclude?includeList=bank%20risk&excludeList=eaten%20fall
+[2021-05-04 13:05:27,373] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-04 13:05:27,447] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-04 13:05:27,551] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-04 13:05:27,714] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-04 13:05:27,863] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-04 13:05:28,005] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-04 13:05:28,171] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-04 13:05:28,346] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-04 13:05:28,488] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-04 13:05:28,615] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-04 13:05:28,783] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-04 13:05:28,951] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-04 13:05:29,094] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-04 13:05:29,211] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-04 13:05:29,332] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-04 13:05:29,447] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-04 13:05:29,588] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-04 13:05:29,735] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-04 13:05:29,907] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-04 13:05:30,048] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-04 13:05:30,180] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-04 13:05:30,293] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-04 13:05:30,413] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-04 13:05:30,532] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-04 13:05:30,684] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-04 13:05:30,819] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-04 13:05:30,971] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-04 13:05:31,136] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-04 13:05:31,249] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-05-04 13:05:31,347] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-05-04 13:05:31,454] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-05-04 13:06:11,534] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keyword=bank
+[2021-05-04 13:06:19,658] DEBUG in root: Upstream URL: http://localhost:5400/index/search?keyword=bank
+[2021-05-04 13:07:04,186] DEBUG in root: Upstream URL: http://localhost:5400/index/search-any?keywordList=bank%20risk
+[2021-05-04 13:07:12,490] DEBUG in root: Upstream URL: http://localhost:5400/index/search-any?keywordList=bank%20risk
+[2021-05-04 13:07:22,720] DEBUG in root: Upstream URL: http://localhost:5400/index/search-all?keywordList=bank%20risk
+[2021-05-04 13:07:48,118] DEBUG in root: Upstream URL: http://localhost:5400/index/search-all?keywordList=bank%20eaten
+[2021-05-04 13:08:08,610] DEBUG in root: Upstream URL: http://localhost:5400/index/search-exclude?includeList=bank%20risk&excludeList=eaten%20fall
+[2021-07-27 14:05:20,512] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-07-27 14:05:20,594] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-07-27 14:05:20,729] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-07-27 14:05:20,849] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-07-27 14:05:20,984] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-07-27 14:05:21,114] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-07-27 14:05:21,286] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-07-27 14:05:21,410] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-07-27 14:05:21,530] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-07-27 14:05:21,654] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-07-27 14:05:21,767] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-07-27 14:05:21,901] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-07-27 14:05:22,009] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-07-27 14:05:22,160] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-07-27 14:05:22,301] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-07-27 14:05:22,406] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-07-27 14:05:22,534] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-07-27 14:05:22,639] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-07-27 14:05:22,769] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-07-27 14:05:22,877] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-07-27 14:05:22,994] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-07-27 14:05:23,141] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-07-27 14:05:23,300] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-07-27 14:05:23,425] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-07-27 14:05:23,564] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-07-27 14:05:23,701] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-07-27 14:05:23,826] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-07-27 14:05:23,969] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-07-27 14:05:24,122] DEBUG in root: Upstream URL: http://localhost:5200/posts/
+[2021-07-27 14:05:24,237] DEBUG in root: Upstream URL: http://localhost:5201/posts/
+[2021-07-27 14:05:24,366] DEBUG in root: Upstream URL: http://localhost:5202/posts/
+[2021-07-27 15:16:33,065] DEBUG in root: Upstream URL: http://localhost:5201/posts/Jow
+[2021-07-27 15:16:35,449] DEBUG in root: Upstream URL: http://localhost:5201/posts/Joe
+[2021-07-27 15:16:58,362] DEBUG in root: Upstream URL: http://localhost:5201/posts/Joe/
